@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { NInput, NButton, useMessage,NSwitch} from "naive-ui"
- 
+
 import {gptServerStore} from '@/store'
 import { mlog, myTrim,blurClean} from "@/api";
 import { t } from '@/locales'
@@ -39,7 +39,7 @@ watch(() => gptServerStore.myData.OPENAI_API_KEY , (n)=>{
 });
 </script>
 <template>
-<div id="setserver"> 
+<div id="setserver">
 <div class="flex justify-between items-baseline ">
   <div class="pb-1">
    <n-switch v-model:value="gptServerStore.myData.IS_SET_SYNC" size="small" >
@@ -138,11 +138,11 @@ watch(() => gptServerStore.myData.OPENAI_API_KEY , (n)=>{
 </section>
 
 
-<div class="text-right">{{$t('dance.viggleabout')}}</div>
+<!--<div class="text-right">{{$t('dance.viggleabout')}}</div>
 <section class="mb-4 flex justify-between items-center"  >
     <n-input @blur="blurClean"  :placeholder="$t('mj.setOpenPlaceholder') " v-model:value="gptServerStore.myData.VIGGLE_SERVER" clearable>
       <template #prefix>
-        <span class="text-[var(--n-tab-text-color-active)]">{{$t('dance.viggleserver')}}:</span>
+        <span class="text-[var(&#45;&#45;n-tab-text-color-active)]">{{$t('dance.viggleserver')}}:</span>
       </template>
     </n-input>
 </section>
@@ -150,10 +150,10 @@ watch(() => gptServerStore.myData.OPENAI_API_KEY , (n)=>{
 <section class="mb-4 flex justify-between items-center"  >
     <n-input  @blur="blurClean" type="password"  :placeholder="$t('dance.setOpenKeyPlaceholder')" show-password-on="click" v-model:value="gptServerStore.myData.VIGGLE_KEY" clearable>
       <template #prefix>
-        <span class="text-[var(--n-tab-text-color-active)]">Viggle Key:</span>
+        <span class="text-[var(&#45;&#45;n-tab-text-color-active)]">Viggle Key:</span>
       </template>
     </n-input>
-</section>
+</section>-->
 
 
 
