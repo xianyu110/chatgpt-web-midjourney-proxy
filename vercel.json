@@ -3,10 +3,10 @@
     {
       "source": "/openapi/(.*)",
       "destination": "/api/proxy"
-    },
-    {
-      "source": "/mjapi/(.*)",
-      "destination": "/api/proxy"
     }
-  ]
+  ],
+  "env": {
+    "OPENAI_API_BASE_URL": "@openai_api_base_url",
+    "OPENAI_API_KEY": "@openai_api_key"
+  }
 }

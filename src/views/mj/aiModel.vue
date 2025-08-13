@@ -18,15 +18,12 @@ const chatSet = new chatSetting( uuid==null?1002:uuid);
 const nGptStore = ref(  chatSet.getGptConfig() );
 
 const config = ref({
-model:[ 'o1','o1-2024-12-17', 'gpt-4-turbo-2024-04-09','o1-preview','o1-mini','o1-preview-2024-09-12','o1-mini-2024-09-12','chatgpt-4o-latest','gpt-4o-2024-11-20','gpt-4o-2024-08-06','gpt-4o-2024-05-13','gpt-4o-mini-2024-07-18','gpt-4o-mini','gpt-4o','gpt-4-turbo','gpt-4-0125-preview','gpt-3.5-turbo',`gpt-4-1106-preview`,`gpt-3.5-turbo-16k`,'gpt-4','gpt-4-0613','gpt-4-32k-0613' ,'gpt-4-32k','gpt-4-32k-0314',`gpt-3.5-turbo-16k-0613`
-,`gpt-4-vision-preview`,`gpt-3.5-turbo-1106` ,'gpt-3.5-turbo-0125'
-,'gpt-3.5-turbo-0301','gpt-3.5-turbo-0613','gpt-4-all','gpt-3.5-net'
-,'gemini-pro',"gemini-pro-vision",'gemini-pro-1.5',"gemini-1.5-pro-exp-0801"
-,'claude-3-7-sonnet-20250219'
-,'claude-3-5-sonnet-20241022','claude-3-sonnet-20240229','claude-3-opus-20240229','claude-3-haiku-20240307','claude-3-5-sonnet-20240620','suno-v3'
-,'deepseek-r1','deepseek-v3'
-,'grok-3','grok-3-reasoner','grok-3-deepsearch'
-,'gpt-4.5-preview-2025-02-27','gpt-4.5-preview'
+model:[ 
+// Gemini Models (Primary)
+'gemini-2.0-flash','gemini-2.0-flash-exp-image-generation','gemini-2.5-flash','gemini-2.5-pro','gemini-embedding-exp-03-07',
+'gemini-pro','gemini-pro-vision','gemini-pro-1.5','gemini-1.5-pro-exp-0801','gemini-1.5-pro','gemini-1.5-flash','gemini-1.0-pro',
+// Keep some GPT models for compatibility
+'gpt-4o','gpt-4o-mini','gpt-4-turbo','gpt-3.5-turbo'
 ]
 ,maxToken:4096
 }); 

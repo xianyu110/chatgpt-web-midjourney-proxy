@@ -3,9 +3,6 @@ import type { RouteRecordRaw } from 'vue-router'
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { setupPageGuard } from './permission'
 import { ChatLayout } from '@/views/chat/layout'
-import mjlayout from '@/views/mj/layout.vue'
-import sunoLayout from '@/views/suno/layout.vue'
-import lumaLayout from '@/views/luma/layout.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -22,23 +19,10 @@ const routes: RouteRecordRaw[] = [
     ],
   },
    {
-    path: '/g',
-    name: 'g',
-    component: ChatLayout,
-    redirect: '/g/g-2fkFE8rbu',
-    children: [
-      {
-        path: '/g/:gid',
-        name: 'GPTs',
-        component: () => import('@/views/chat/index.vue'),
-      },
-    ],
-  },
-   {
     path: '/m',
     name: 'm',
     component: ChatLayout,
-    redirect: '/m/gpt-3.5-turbo',
+    redirect: '/m/gemini-pro',
     children: [
       {
         path: '/m/:gid',
@@ -57,79 +41,6 @@ const routes: RouteRecordRaw[] = [
         path: '/s/t',
         name: 'Setting',
         component: () => import('@/views/chat/index.vue'),
-      },
-    ],
-  },
-
-
-  {
-    path: '/draw',
-    name: 'Rootdraw',
-    component: mjlayout,
-    redirect: '/draw/index',
-    children: [
-      {
-        path: '/draw/:uuid?',
-        name: 'draw',
-        component: () => import('@/views/mj/draw.vue'),
-      },
-    ],
-  },
-
-    {
-    path: '/music',
-    name: 'music',
-    component: sunoLayout,
-    redirect: '/music/index',
-    children: [
-      {
-        path: '/music/:uuid?',
-        name: 'music',
-        component: () => import('@/views/suno/music.vue'),
-      },
-    ],
-
-    
-
-  },
-  {
-    path: '/video',
-    name: 'video',
-    component: lumaLayout,
-    redirect: '/video/index',
-    children: [
-      {
-        path: '/video/:uuid?',
-        name: 'video',
-        component: () => import('@/views/luma/video.vue'),
-      },
-    ],
-  },
-
-  {
-    path: '/dance',
-    name: 'dance',
-    component: lumaLayout,
-    redirect: '/dance/index',
-    children: [
-      {
-        path: '/dance/:uuid?',
-        name: 'dance',
-        component: () => import('@/views/viggle/dance.vue'),
-      },
-    ],
-  },
-
-  {
-    path: '/wav',
-    name: 'wav',
-    component: lumaLayout,
-    redirect: '/wav/index',
-    children: [
-      {
-        path: '/wav/:uuid?',
-        name: 'wav',
-        component: () => import('@/views/wav/wav.vue'),
       },
     ],
   },
